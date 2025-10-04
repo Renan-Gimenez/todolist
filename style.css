@@ -1,21 +1,25 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  min-height: 100vh;
   background-color:aquamarine;
   color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 32px;
 }
 
 h1 {
   color: rgb(23, 14, 104);
   font-size: 3rem;
   text-align: center;
-  
+
 }
 
 form {
@@ -46,6 +50,9 @@ form {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 5px 12px rgba(151, 150, 150, 0.1);
 }
 
 .todos li {
@@ -55,7 +62,40 @@ form {
   padding: 1rem 2rem;
 }
 
-.todos li.completed {
+.todos li.completed .todo-text {
   color:rgb(23, 14, 104);
   text-decoration: line-through;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.remove-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 100%;
+  min-width: 30px;
+  min-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  margin-left: 8px;
+  align-self: flex-start;
+}
+
+.remove-btn:hover {
+  background: #ff3742;
+}
+
+.remove-btn:active {
+  background: #ff2f3a;
 }
